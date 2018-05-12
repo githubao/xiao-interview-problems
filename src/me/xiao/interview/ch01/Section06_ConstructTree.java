@@ -1,4 +1,6 @@
-package me.xiao.interview;
+package me.xiao.interview.ch01;
+
+import me.xiao.interview.TreeNode;
 
 /**
  * 构建二叉树

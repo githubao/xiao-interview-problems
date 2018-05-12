@@ -1,4 +1,4 @@
-package me.xiao.interview;
+package me.xiao.interview.ch01;
 
 /**
  * 输出一个排好序的数组的旋转的最小值

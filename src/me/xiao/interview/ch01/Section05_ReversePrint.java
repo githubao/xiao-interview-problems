@@ -1,4 +1,6 @@
-package me.xiao.interview;
+package me.xiao.interview.ch01;
+
+import me.xiao.interview.ListNode;
 
 /**
  * 反向打印链表
@@ -11,12 +13,13 @@ package me.xiao.interview;
 public class Section05_ReversePrint {
 
     public static void main(String[] args) {
-        ListNode head = build();
+        ListNode head = ListNode.defaultBuild();
         new Section05_ReversePrint().print(head);
     }
 
     /**
      * 递归其实就是压栈操作
+     *
      * @param head
      */
     private void print(ListNode head) {
@@ -24,16 +27,6 @@ public class Section05_ReversePrint {
             print(head.next);
             System.out.print(head.val + "->");
         }
-    }
-
-    private static ListNode build() {
-        ListNode root = new ListNode(1);
-        root.next = new ListNode(2);
-        root.next.next = new ListNode(3);
-        root.next.next.next = new ListNode(4);
-        root.next.next.next.next = new ListNode(5);
-
-        return root;
     }
 
 }

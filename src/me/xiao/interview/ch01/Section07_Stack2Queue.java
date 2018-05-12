@@ -1,4 +1,4 @@
-package me.xiao.interview;
+package me.xiao.interview.ch01;
 
 import java.util.Stack;
 

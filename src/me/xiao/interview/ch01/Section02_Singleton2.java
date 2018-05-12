@@ -1,4 +1,4 @@
-package me.xiao.interview;
+package me.xiao.interview.ch01;
 
 /**
  * 双重检验锁的校检机制
