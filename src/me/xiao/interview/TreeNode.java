@@ -47,7 +47,7 @@ public class TreeNode {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
+//        root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
@@ -61,12 +61,34 @@ public class TreeNode {
         return root;
     }
 
+    public static TreeNode bstBuild() {
+        TreeNode root = new TreeNode(10);
+        root.left = new TreeNode(6);
+        root.right = new TreeNode(14);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(8);
+        root.right.left = new TreeNode(12);
+        root.right.right = new TreeNode(16);
+        return root;
+    }
+
     @Override
     public String toString() {
+        int leftVal = left == null ? -1 : left.val;
+        int rightVal = right == null ? -1 : right.val;
+
         return "TreeNode{" +
                 "val=" + val +
-                ", left=" + left +
-                ", right=" + right +
+                ", left=" + leftVal +
+                ", right=" + rightVal +
                 '}';
+    }
+
+    public void circlePrint() {
+        System.out.println(this);
+        if (this.right != null){
+            this.right.circlePrint();
+        }
+
     }
 }
